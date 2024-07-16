@@ -1,7 +1,6 @@
 # Build a AfriChat web application
 
 - Next.js
-- Primsa
 - Shadcn
 - Tailwind Css
 - Gemini Ai
