@@ -77,8 +77,12 @@ const AfrichatBody = () => {
             </div>
           </form>
           <p className="text-gray-400 text-sm text-center p-3">
-            Africhat may display inaccurate info, including about people, so
-            double-check its responses. Your privacy and Africhat Apps
+            Africhat may display inaccurate info, so double-check its responses.
+            copyright &copy; {new Date().getFullYear()}{" "}
+            <a href="https://dawitzewdu.netlify.app/" className="text-gray-200">
+              Dawit Zewdu Munie
+            </a>
+            .
           </p>
         </div>
       </div>
