@@ -9,6 +9,8 @@ import {
   SendHorizontal,
 } from "lucide-react";
 import { Context } from "@/context/ContextProvider";
+import Image from "next/image";
+
 const AfrichatBody = () => {
   const {
     submit,
@@ -23,49 +25,25 @@ const AfrichatBody = () => {
   return (
     <div className="flex-1 min-h-[100vh] pb-[15vh] relative">
       <div className="flex items-center justify-between p-5 text-xl text-gray-400">
-        <p>Gemini</p>
-        <CircleUserRound size={40} className="text-softTextColor" />
+        <p>AfriChat</p>
+        <Image
+          src="/user.jpg"
+          width={40}
+          height={40}
+          className="rounded-full"
+          alt="user"
+        />
       </div>
       <div className="max-w-[900px] m-auto">
         {!displayResult ? (
           <>
-            <div className="my-12 text-5xl font-medium p-5">
+            <div className="my-12 text-5xl font-normal p-5">
               <p>
                 <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                  Hello, Mehtab kazmi
+                  Hello, I &apos; m AfriChat.
                 </span>
               </p>
               <p>How can I help you today?</p>
-            </div>
-            <div className="grid grid-cols-4 gap-5 p-5">
-              <div className="h-48 p-4 bg-bgSecondaryColor rounded-xl relative cursor-pointer">
-                <p>Suggest beautiful places to see on an upcoming road trip</p>
-                <Compass
-                  size={35}
-                  className="p-1 absolute bottom-2 right-2 bg-bgPrimaryColor text-softTextColor rounded-full"
-                />
-              </div>
-              <div className="h-48 p-4 bg-bgSecondaryColor rounded-xl relative cursor-pointer">
-                <p>What’s the reaction to and impact of autonomous vehicles</p>
-                <Lightbulb
-                  size={35}
-                  className="p-1 absolute bottom-2 right-2 bg-bgPrimaryColor text-softTextColor rounded-full"
-                />
-              </div>
-              <div className="h-48 p-4 bg-bgSecondaryColor rounded-xl relative cursor-pointer">
-                <p>Come up with a recipe for an upcoming event</p>
-                <Youtube
-                  size={35}
-                  className="p-1 absolute bottom-2 right-2 bg-bgPrimaryColor text-softTextColor rounded-full"
-                />
-              </div>
-              <div className="h-48 p-4 bg-bgSecondaryColor rounded-xl relative cursor-pointer">
-                <p>Evaluate and rank common camera categories</p>
-                <Code
-                  size={35}
-                  className="p-1 absolute bottom-2 right-2 bg-bgPrimaryColor text-softTextColor rounded-full"
-                />
-              </div>
             </div>
           </>
         ) : (
@@ -75,7 +53,7 @@ const AfrichatBody = () => {
               <p>{recentPrompts}</p>
             </div>
             <div className="flex items-start gap-5">
-              <img src="/africhat.png" alt="" />
+              <Image src="/africhat.png" alt="" />
               <p
                 className="text-md font-normal loading-6 text-gray-400"
                 dangerouslySetInnerHTML={{ __html: result }}
@@ -99,8 +77,8 @@ const AfrichatBody = () => {
             </div>
           </form>
           <p className="text-gray-400 text-sm text-center p-3">
-            Gemini may display inaccurate info, including about people, so
-            double-check its responses. Your privacy and Gemini Apps
+            Africhat may display inaccurate info, including about people, so
+            double-check its responses. Your privacy and Africhat Apps
           </p>
         </div>
       </div>
