@@ -49,11 +49,23 @@ const AfrichatBody = () => {
         ) : (
           <div className="result">
             <div className="my-10 flex items-center gap-5">
-              <CircleUserRound size={40} className="text-softTextColor" />
-              <p>{recentPrompts}</p>
+              <Image
+                src="/user.jpg"
+                width={40}
+                height={40}
+                className="rounded-full"
+                alt="user"
+              />
+              <p className="text-gray-400">{recentPrompts}</p>
             </div>
             <div className="flex items-start gap-5">
-              <Image src="/africhat.png" alt="" />
+              <Image
+                src="/africhat.png"
+                alt="africhat"
+                width={30}
+                height={30}
+                className="rounded-full  bg-white bg-opacity-100"
+              />
               <p
                 className="text-md font-normal loading-6 text-gray-400"
                 dangerouslySetInnerHTML={{ __html: result }}
